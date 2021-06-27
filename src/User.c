@@ -95,7 +95,7 @@
 /* @@PLUGIN-END@@ */
 
 //TRAFFIC_OBJ_DEV_ANGLE
-int test11=0;
+int test11=2;
 
 //define the number of traffic objects here
 #define NO_TRAFFIC_OBJS	1
