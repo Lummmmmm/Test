@@ -95,7 +95,7 @@
 /* @@PLUGIN-END@@ */
 
 //TRAFFIC_OBJ_DEV_ANGLE
-
+int test11=0;
 
 //define the number of traffic objects here
 #define NO_TRAFFIC_OBJS	1
@@ -735,7 +735,7 @@ User_Calc (double dt)
     	VEC_Normalize2D(RouteDir,rout.suv);
     	DirAngle[i] = atan2(RouteDir[1], RouteDir[0]);
     	//Log("\ns.t0:%f u.t0:%f v.t0:%f",RouteDir[0],RouteDir[1],DirAngle);
-    	/* Vehicle-Yaw beschränken auf [-PI ... +PI] */
+    	/* Vehicle-Yaw beschrÃ¤nken auf [-PI ... +PI] */
     	    trf_obj_yaw[i] = fmod(t_objs->r_zyx[2], 2*M_PI);
     		if (trf_obj_yaw[i] > M_PI)
     			trf_obj_yaw[i] -= 2*M_PI;
@@ -743,10 +743,10 @@ User_Calc (double dt)
     			trf_obj_yaw[i] += 2*M_PI;
 
     		/* Deviation Angle: Winkel zwischen Fahrzeug-Gierwinkel undprojiziertem
-    		Straßen-Richtungsvektor */
+    		StraÃŸen-Richtungsvektor */
     		DevAng[i] = trf_obj_yaw[i] - DirAngle[i];
 
-    		/* DeviationAngle beschränken auf [-PI ... +PI] */
+    		/* DeviationAngle beschrÃ¤nken auf [-PI ... +PI] */
     		if (DevAng[i] > M_PI)
     			DevAng[i] -= 2*M_PI;
     		else if (DevAng[i] < -M_PI)
